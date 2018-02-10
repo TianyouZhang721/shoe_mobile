@@ -9,7 +9,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class IndexService {
     constructor(private http: HttpClient ) { }
-    getIndexTalk(): Observable<any> {
-        return this.http.get(`127.0.0.1/dunk/shoes/data/routes/comment/addComment.php`);
+    getIndexBanner(): Observable<any> {
+        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexBanner.php`);
+    }
+    // 获取首页推荐话题
+    getIndexTopic(): Observable<any> {
+        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexTopic.php`)
     }
 }

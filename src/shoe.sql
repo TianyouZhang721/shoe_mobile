@@ -13,12 +13,39 @@ CREATE TABLE index_banner_carousel(
 );
 #banner轮播数据
 INSERT INTO index_banner_carousel VALUES
-(null,"img/banner/banner1.jpg"),
-(null,"img/banner/banner2.jpg"),
-(null,"img/banner/banner3.jpg"),
-(null,"img/banner/banner4.jpg"),
-(null,"img/banner/banner5.jpg"),
-(null,"img/banner/banner6.jpg");
+(null,"assets/img/banner/banner1.jpg"),
+(null,"assets/img/banner/banner2.jpg"),
+(null,"assets/img/banner/banner3.jpg"),
+(null,"assets/img/banner/banner4.jpg"),
+(null,"assets/img/banner/banner5.jpg"),
+(null,"assets/img/banner/banner6.jpg");
+
+CREATE TABLE index_commend_topic (
+  tid INT PRIMARY KEY AUTO_INCREMENT,
+  img varchar(128) DEFAULT NULL,
+  title varchar(128) DEFAULT NULL,
+  discribe varchar(128) DEFAULT NULL,
+  avatorimg varchar(1024) DEFAULT NULL,
+  hostimg varchar(128) DEFAULT NULL,
+  peoplecoun int DEFAULT NULL,
+  view int DEFAULT NULL
+);
+
+INSERT INTO `index_commend_topic` (`tid`, `img`, `title`, `discribe`, `avatorimg`, `hostimg`, `peoplecount`, `view`) VALUES
+(1, 'assets/img/topic/topic1.jpg', 'get买家秀', '你在get买了啥？你晒照，我发奖！', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 3, 10),
+(2, 'assets/img/topic/topic2.jpeg', 'NIKEiD 新春计划', 'NIKEiD的新春计划，快来参加吧！', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 1, 15),
+(3, 'assets/img/topic/topic3.jpg', '最污挑战赛', '最污挑战赛，胸上放手机，你敢玩吗？', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 3, 13),
+(4, 'assets/img/topic/topic4.jpg', '开箱首晒', '“有你的快递”，分享收货的喜悦', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 2, 11),
+(5, 'assets/img/topic/topic5.jpg', '骑行日志', '骑行日志，每日一记！', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 4, 24),
+(6, 'assets/img/topic/topic6.jpg', '天下足球', '心跳不息，踢球不止', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 6, 21),
+(7, 'assets/img/topic/topic7.jpg', '随手拍', '人人都是摄影师，捕捉灵感，发现美好！', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 4, 24),
+(8, 'assets/img/topic/topic8.jpg', '海淘晒单', '值得等待的海外宝贝，show出来', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 1, 8),
+(9, 'assets/img/topic/topic9.jpg', 'Sneaker Girl', '不止腿长和颜值，更是爱鞋懂鞋的sneaker girl！', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 2, 18),
+(10, 'assets/img/topic/topic10.jpg', 'Sneaker Boy', '晒出你的sneaker和让人舔屏的美好肉体吧', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 6, 38),
+(11, 'assets/img/topic/topic11.jpg', '我是一名跑者', '跑过朝阳，跑过日落，跑过风景，跑过你', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 2, 22),
+(12, 'assets/img/topic/topic12.jpg', '纹身会上瘾', '穿西装的可能是禽兽，有纹身的不一定凶残', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 1, 19),
+(13, 'assets/img/topic/topic13.jpg', 'T恤这件小事', '以T恤为主题，可以添加任何的创意', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 6, 44),
+(14, 'assets/img/topic/topic14.jpg', '球鞋护理', '使球鞋永远穿不旧，你怎么做的', '[{"img":"assets/img/avator/user1.jpg"},{"img":"assets/img/avator/user2.jpg"},{"img":"assets/img/avator/user3.jpg"},{"img":"assets/img/avator/user4.jpg"},{"img":"assets/img/avator/user5.jpg"},{"img":"assets/img/avator/user6.jpg"},{"img":"assets/img/avator/user7.jpg"},{"img":"assets/img/avator/user8.jpg"},{"img":"assets/img/avator/user9.jpg"},{"img":"assets/img/avator/user10.jpg"}]', 'assets/img/avator/user1.jpg', 5, 66);
 
 /**购物车条目**/
 CREATE TABLE shoe_cart(

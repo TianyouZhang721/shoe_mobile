@@ -17,17 +17,8 @@
                 <div class="home-banner">
                     <swiper class="banner-swiper" [config]="banner">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/img/banner/banner1.jpg">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/img/banner/banner2.jpg">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/img/banner/banner3.jpg">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/img/banner/banner4.jpg">
+                            <div class="swiper-slide" *ngFor="let item of bannerList">
+                                <img [src]="item?.img">
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -43,6 +34,51 @@
                         <img src="../../../assets/img/index/home-img_06.png" alt="">
                         <i class="icon iconfont icon-iconfontpaihangbang"></i>
                         <h3>人气排行榜</h3>
+                    </div>
+                </div>
+                <div class="commend-topic">
+                    <div class="commend-today">
+                        <h5>今日推荐话题</h5>
+                        <div class="topic-all">
+                            全部话题
+                            <i class="icon iconfont icon-youjiantou"></i>
+                        </div>
+                    </div>
+                    <div class="topic-content">
+                        <div class="topic-info" *ngFor="let item of topicList | slice:0:3">
+                            <div class="topic-img">
+                                <img [src]="item?.img" alt="">
+                            </div>
+                            <div class="topic-detail">
+                                <div class="topic-title">{{item?.title}}</div>
+                                <div class="topic-describe">{{item?.discribe}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-commend">
+                    <div class="today-titel">今日推荐</div>
+                    <div class="commend-content">
+                        <div class="commend-info">
+                            <div class="info-left-img">
+                                <img src="assets/img/user/user1.jpg" alt="">
+                            </div>
+                            <div class="info-right-detail">
+                                <div class="info-right-top">
+                                    <div class="person-info">
+                                        <div class="person-name">ZHENGLIN</div>
+                                        <div class="starttime">23小时前</div>
+                                    </div>
+                                    <div class="follow">
+                                        <i class="icon iconfont icon-tianjia"></i> 关注
+                                    </div>
+                                </div>
+                                <div class="person-talk">有机会一起摔跤</div>
+                                <div class="topic-name">
+                                    #sneaker girls
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

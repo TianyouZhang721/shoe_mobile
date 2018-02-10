@@ -21,6 +21,7 @@
         "styles": [
             "styles.css",
             "styles/iconfont/iconfont.css",
+            "styles/base/base.scss",
             "../node_modules/swiper/dist/css/swiper.css"
         ],
         "scripts": [

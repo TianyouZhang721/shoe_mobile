@@ -16,19 +16,33 @@ export class HomeComponent implements OnInit {
       crossFade: false,
     }
   };
+  bannerList: any;
+  topicList: any;
 
   constructor(
     private indexService: IndexService,
   ) { }
 
   ngOnInit() {
-    this.getIndexTalk();
+    this.getIndexBanner();
+    this.getIndexTopic();
   }
-  getIndexTalk() {
-      this.indexService.getIndexTalk().subscribe(
+  getIndexBanner() {
+      this.indexService.getIndexBanner().subscribe(
         obj => {
           console.log(obj);
+          this.bannerList = obj;
         }
       );
+  }
+
+  //获取推荐话题
+  getIndexTopic() {
+    this.indexService.getIndexTopic().subscribe(
+      obj => {
+        console.log(obj);
+        this.topicList = obj;
+      }
+    )
   }
 }
