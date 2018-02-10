@@ -1,0 +1,69 @@
+<div class="home">
+    <div class="home-top">
+        <div class="search-icon">
+            <i class="icon iconfont icon-sousuo_sousuo"></i>
+        </div>
+
+        <div class="message-icon">
+            <i class="icon iconfont icon-youjian"></i>
+        </div>
+    </div>
+    <nz-tabset>
+        <nz-tab>
+            <ng-template #nzTabHeading>
+                发现
+            </ng-template>
+            <div class="tab-content">
+                <div class="home-banner">
+                    <swiper class="banner-swiper" [config]="banner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/banner/banner1.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/banner/banner2.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/banner/banner3.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/banner/banner4.jpg">
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </swiper>
+                </div>
+                <div class="home-nav">
+                    <div class="home-nav-left">
+                        <img src="../../../assets/img/index/home-img_03.png" alt="">
+                        <i class="icon iconfont icon-fujinderen"></i>
+                        <h3>附近好友</h3>
+                    </div>
+                    <div class="home-nav-right">
+                        <img src="../../../assets/img/index/home-img_06.png" alt="">
+                        <i class="icon iconfont icon-iconfontpaihangbang"></i>
+                        <h3>人气排行榜</h3>
+                    </div>
+                </div>
+            </div>
+        </nz-tab>
+        <nz-tab>
+            <ng-template #nzTabHeading>
+                关注
+            </ng-template>
+
+        </nz-tab>
+        <nz-tab>
+            <ng-template #nzTabHeading>
+                评测
+            </ng-template>
+
+        </nz-tab>
+        <nz-tab>
+            <ng-template #nzTabHeading>
+                鉴定
+            </ng-template>
+
+        </nz-tab>
+    </nz-tabset>
+</div>
