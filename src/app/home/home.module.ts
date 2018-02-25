@@ -8,6 +8,6 @@ import { ShareModule } from '../share/share.module';
     CommonModule,
     ShareModule,
   ],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent ]
 })
 export class HomeModule { }

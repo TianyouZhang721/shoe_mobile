@@ -1,3 +1,4 @@
+//发现
 .home-top {
     height: .88rem;
     position: fixed;
@@ -173,9 +174,11 @@
         font-size: .26rem;
     }
     .commend-content {
+        padding-bottom: .2rem;
         .commend-info {
             border-bottom: 1px solid #f2f2f2;
             overflow: hidden;
+            padding-bottom: .3rem;
             .info-left-img {
                 width: 15%;
                 float: left;
@@ -240,8 +243,95 @@
                     color: #999;
                     font-size: .2rem;
                 }
+                .upload-pic {
+                    margin-top: .15rem;
+                    // width: 90%;
+                    ul {
+                        width: 100%;
+                        overflow: hidden;
+                        li {
+                            width: 1.72rem;
+                            height: 1.72rem;
+                            margin-right: .2rem;
+                            margin-bottom: .2rem;
+                            float: left;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .icons {
+                    width: 100%;
+                    height: .5rem;
+                    .three-icons {
+                        overflow: hidden;
+                        float: right;
+                        margin-right: .8rem;
+                        display: flex;
+                        align-items: center;
+                        .iconfont {
+                            font-size: .32rem;
+                        }
+                        div {
+                            float: left;
+                            margin-left: .2rem;
+                        }
+                        .share {
+                            .iconfont {
+                                line-height: .5rem;
+                            }
+                        }
+                    }
+                }
+                .comment-reply {
+                    .content {
+                        padding: .05rem 0;
+                        .author {
+                            font-size: .22rem;
+                            color: #9e9e9e;
+                            margin-right: .05rem;
+                        }
+                        .comment {
+                            font-size: .22rem;
+                            color: #1f1f1f;
+                        }
+                    }
+                    .comment-all {
+                        color: #1f1f1f;
+                        padding-top: .1rem;
+                        span {
+                            color: #0e9dbb;
+                        }
+                    }
+                }
             }
         }
+    }
+}
+
+//关注
+.not-login{
+    text-align:center;
+    padding-top:4rem;
+    background-color:#f7f7f7;
+    p{
+        font-size:.26rem;
+        color:#999;
+    }
+    button{
+        width: 2rem;
+        height: .6rem;
+        margin: 0 auto;
+        text-align: center;
+        line-height: .6rem;
+        border-radius: 4px;
+        border: 1px solid #9e9e9e;
+        color: #999;
+        font-size: .24rem;
+        margin-top: .3rem;
+        background: #f7f7f7;
     }
 }
 
@@ -281,7 +371,7 @@
 :host ::ng-deep .ant-tabs-content {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     .ant-tabs-tabpane {
         width: 100%;
         height: 100%;

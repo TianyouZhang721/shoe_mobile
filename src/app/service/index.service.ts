@@ -16,4 +16,8 @@ export class IndexService {
     getIndexTopic(): Observable<any> {
         return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexTopic.php`)
     }
+    // 获取首页今日推荐
+    getIndexTodayCommend(): Observable<any> {
+        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexTopicCommend.php`)
+    }
 }

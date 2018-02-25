@@ -10,11 +10,12 @@ import { ServiceModule } from './service/service.module';
 
 
 import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    // HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     NgZorroAntdModule.forRoot(),
     SwiperModule,
-    ServiceModule
+    ServiceModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

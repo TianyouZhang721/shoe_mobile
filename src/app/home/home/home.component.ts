@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
   };
   bannerList: any;
   topicList: any;
+  todayCommendMessage: any;
+  todayCommendComment: any = [];
+  todayCommendReply: any;
+  todayCommendImgs: any = [];
 
   constructor(
     private indexService: IndexService,
@@ -26,23 +30,41 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getIndexBanner();
     this.getIndexTopic();
+    this.getIndexTodayCommend();
   }
   getIndexBanner() {
       this.indexService.getIndexBanner().subscribe(
         obj => {
-          console.log(obj);
           this.bannerList = obj;
         }
       );
   }
 
-  //获取推荐话题
+  // 获取推荐话题
   getIndexTopic() {
     this.indexService.getIndexTopic().subscribe(
       obj => {
-        console.log(obj);
         this.topicList = obj;
       }
-    )
+    );
+  }
+  // 获取今日推荐
+  getIndexTodayCommend() {
+    this.indexService.getIndexTodayCommend().subscribe(
+      obj => {
+        console.log(obj);
+        this.todayCommendMessage = obj['message'];
+        // this.todayCommendComment = obj["comment"];
+        this.todayCommendReply = obj['reply'];
+        for (let i = 0; i < obj['message'].length; i++) {
+          this.todayCommendImgs.push(JSON.parse(obj['message'][i].imgs));
+        }
+        for (let i = 0; i < obj['comment'].length; i++) {
+          this.todayCommendComment.push(JSON.parse(obj['comment'][i].comment));
+        }
+        console.log(this.todayCommendComment);
+        console.log(this.todayCommendReply);
+      }
+    );
   }
 }

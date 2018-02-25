@@ -58,24 +58,55 @@
                 </div>
                 <div class="today-commend">
                     <div class="today-titel">今日推荐</div>
-                    <div class="commend-content">
+                    <div class="commend-content" *ngFor="let item of todayCommendMessage;let i=index">
                         <div class="commend-info">
                             <div class="info-left-img">
-                                <img src="assets/img/user/user1.jpg" alt="">
+                                <img [src]="item?.avator" alt="">
                             </div>
                             <div class="info-right-detail">
                                 <div class="info-right-top">
                                     <div class="person-info">
-                                        <div class="person-name">ZHENGLIN</div>
+                                        <div class="person-name">{{item?.author_name}}</div>
                                         <div class="starttime">23小时前</div>
                                     </div>
                                     <div class="follow">
                                         <i class="icon iconfont icon-tianjia"></i> 关注
                                     </div>
                                 </div>
-                                <div class="person-talk">有机会一起摔跤</div>
+                                <div class="person-talk">{{item?.content}}</div>
                                 <div class="topic-name">
-                                    #sneaker girls
+                                    #{{item?.topic}}
+                                </div>
+                                <div class="upload-pic">
+                                    <ul>
+                                        <li *ngFor="let item of todayCommendImgs[i]">
+                                            <img [src]="item?.img" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="icons">
+                                    <div class="three-icons">
+                                        <div class="share">
+                                            <i class="icon iconfont icon-fenxiang"></i>
+                                        </div>
+                                        <div class="message">
+                                            <i class="icon iconfont icon-huifu"></i>
+                                            <span>{{todayCommendComment[i].length}}</span>
+                                        </div>
+                                        <div class="like">
+                                            <i class="icon iconfont icon-shoucang"></i>
+                                            <span>{{item?.view_like}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-reply">
+                                    <div class="content" *ngFor="let item of todayCommendComment[i]">
+                                        <span class="author">{{item?.commentor}}:</span>
+                                        <span class="comment">{{item?.comment_content}}</span>
+                                    </div>
+                                    <div class="comment-all">
+                                        查看全部<span>{{todayCommendComment[i]?.length}}</span>条评论
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +118,12 @@
             <ng-template #nzTabHeading>
                 关注
             </ng-template>
-
+            <div class="tab-content">
+                <div class="not-login">
+                    <p>只有登陆了，才能看到她们的动态哦</p>
+                    <button>去登录</button>
+                </div>
+            </div>
         </nz-tab>
         <nz-tab>
             <ng-template #nzTabHeading>
@@ -103,3 +139,4 @@
         </nz-tab>
     </nz-tabset>
 </div>
+<app-footer></app-footer>

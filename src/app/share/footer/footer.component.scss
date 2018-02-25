@@ -1,0 +1,60 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: .98rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(240, 240, 240, .8);
+    div {
+        width: 25%;
+        text-align: center;
+        float: left;
+        .show {
+            color: #19a3d1;
+        }
+    }
+    .shequ {
+        .iconfont {
+            font-size: .5rem;
+            display: block;
+            line-height: .7rem;
+        }
+        span {
+            margin-top: -.1rem;
+            display: block;
+        }
+    }
+    .zixun {
+        .iconfont {
+            font-size: .34rem;
+            line-height: 0.7rem;
+            display: block;
+        }
+        span {
+            display: block;
+            margin-top: -.11rem;
+        }
+    }
+    .saohuo {
+        .iconfont {
+            font-size: .4rem;
+            line-height: .7rem;
+            display: block;
+        }
+        span {
+            display: block;
+            margin-top: -.1rem;
+        }
+    }
+    .wode {
+        .iconfont {
+            font-size: .4rem;
+            line-height: .7rem;
+            display: block;
+        }
+        span {
+            display: block;
+            margin-top: -.1rem;
+        }
+    }
+}
