@@ -1,18 +1,29 @@
 <div class="footer">
-    <div class="shequ" (nzClick)="isShow = !isShow">
-        <i class="icon iconfont icon-hudongshequ"></i>
-        <span [ngClass]="{'show':isShow}">社区</span>
+    <div class="community" routerLinkActive="active">
+        <a [routerLink]="['/home']">
+            <i class="icon iconfont icon-hudongshequ"></i>
+            <span>社区</span>
+        </a>
+
     </div>
-    <div class="zixun">
-        <i class="icon iconfont icon-zixun"></i>
-        <span>资讯</span>
+    <div class="information" routerLinkActive="active">
+        <a [routerLink]="['/information']">
+            <i class="icon iconfont icon-zixun"></i>
+            <span>资讯</span>
+        </a>
+
     </div>
-    <div class="saohuo">
-        <i class="icon iconfont icon-shoplight"></i>
-        <span>扫货</span>
+    <div class="shopping" routerLinkActive="active">
+        <a [routerLink]="['/shopping']">
+            <i class="icon iconfont icon-shoplight"></i>
+            <span>扫货</span>
+        </a>
+
     </div>
-    <div class="wode">
-        <i class="icon iconfont icon-wode"></i>
-        <span>我的</span>
+    <div class="myinfo" routerLinkActive="active">
+        <a [routerLink]="['/myinfo']">
+            <i class="icon iconfont icon-wode"></i>
+            <span>我的</span>
+        </a>
     </div>
 </div>

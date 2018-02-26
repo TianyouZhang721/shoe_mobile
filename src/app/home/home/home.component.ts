@@ -52,7 +52,6 @@ export class HomeComponent implements OnInit {
   getIndexTodayCommend() {
     this.indexService.getIndexTodayCommend().subscribe(
       obj => {
-        console.log(obj);
         this.todayCommendMessage = obj['message'];
         // this.todayCommendComment = obj["comment"];
         this.todayCommendReply = obj['reply'];
@@ -62,8 +61,6 @@ export class HomeComponent implements OnInit {
         for (let i = 0; i < obj['comment'].length; i++) {
           this.todayCommendComment.push(JSON.parse(obj['comment'][i].comment));
         }
-        console.log(this.todayCommendComment);
-        console.log(this.todayCommendReply);
       }
     );
   }
