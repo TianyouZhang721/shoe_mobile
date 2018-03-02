@@ -10,14 +10,14 @@ import { HttpClient } from '@angular/common/http';
 export class IndexService {
     constructor(private http: HttpClient ) { }
     getIndexBanner(): Observable<any> {
-        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexBanner.php`);
+        return this.http.get(`http://127.0.0.1:8080/shoe_mobile/src/data/routes/index/getIndexBanner.php`);
     }
     // 获取首页推荐话题
     getIndexTopic(): Observable<any> {
-        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexTopic.php`)
+        return this.http.get(`http://127.0.0.1:8080/shoe_mobile/src/data/routes/index/getIndexTopic.php`)
     }
     // 获取首页今日推荐
     getIndexTodayCommend(): Observable<any> {
-        return this.http.get(`http://127.0.0.1/getShoes/src/data/routes/index/getIndexTopicCommend.php`)
+        return this.http.get(`http://127.0.0.1:8080/shoe_mobile/src/data/routes/index/getIndexTopicCommend.php`)
     }
 }
